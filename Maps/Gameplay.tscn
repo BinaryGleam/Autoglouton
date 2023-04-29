@@ -1,9 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d1mkhlvh4i24a"]
+[gd_scene load_steps=3 format=3 uid="uid://d1mkhlvh4i24a"]
 
 [ext_resource type="PackedScene" uid="uid://df7bbov2dni5f" path="res://features/Pipe.tscn" id="1_a0rw0"]
+[ext_resource type="PackedScene" uid="uid://delgyb3wpxvlk" path="res://features/Spawner.tscn" id="2_e5g7w"]
 
 [node name="Gameplay" type="Node2D"]
 texture_filter = 1
 texture_repeat = 1
 
 [node name="Pipe" parent="." instance=ExtResource("1_a0rw0")]
+
+[node name="Spawner" parent="." instance=ExtResource("2_e5g7w")]
+position = Vector2(392, -102)

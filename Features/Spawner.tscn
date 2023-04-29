@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://delgyb3wpxvlk"]
+
+[ext_resource type="Script" path="res://features/Spawner.gd" id="1_gcjvr"]
+[ext_resource type="PackedScene" uid="uid://cy7y6ekyt56po" path="res://features/Garbage.tscn" id="2_cqnh6"]
+
+[node name="Spawner" type="Node2D"]
+position = Vector2(379, 219)
+script = ExtResource("1_gcjvr")
+spawn_area = Rect2(-10, -5, 10, 5)
+default_garbage = ExtResource("2_cqnh6")
