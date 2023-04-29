@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://df7bbov2dni5f"]
 
 [ext_resource type="Texture2D" uid="uid://cp8kgou2ahpek" path="res://assets/pipes/PipeBackground.png" id="1_fhsyp"]
-[ext_resource type="Texture2D" uid="uid://dkivqru2g6415" path="res://assets/pipes/PipeSkeleton.png" id="2_tdnu5"]
+[ext_resource type="PackedScene" uid="uid://r0ywxoyn0foo" path="res://features/PipeSkeleton.tscn" id="2_spys7"]
 [ext_resource type="Texture2D" uid="uid://c3da0y1en2uho" path="res://assets/pipes/PipeWindow.png" id="3_5k77x"]
-[ext_resource type="Texture2D" uid="uid://bjcdirhw5y2tm" path="res://assets/pipes/PipeRightBlocker.png" id="4_fdlyy"]
-[ext_resource type="Texture2D" uid="uid://pagj4inunf5u" path="res://assets/pipes/PipeLeftBlocker.png" id="5_it34f"]
+[ext_resource type="PackedScene" uid="uid://dutgu8b2rf2wi" path="res://features/PipeRightBlocker.tscn" id="4_udeb6"]
+[ext_resource type="PackedScene" uid="uid://bc7sen8khweh6" path="res://features/PipeLeftBlocker.tscn" id="5_a4k7n"]
 
 [node name="Pipe" type="Node2D"]
 texture_filter = 1
@@ -15,28 +15,14 @@ z_index = -100
 position = Vector2(396, 256)
 texture = ExtResource("1_fhsyp")
 
-[node name="PipeSkeleton" type="Sprite2D" parent="."]
-top_level = true
-z_index = 100
-position = Vector2(396, 256)
-texture = ExtResource("2_tdnu5")
+[node name="PipeSkeleton" parent="." instance=ExtResource("2_spys7")]
 
 [node name="PipeWindow" type="Sprite2D" parent="."]
-top_level = true
 z_index = 100
+texture_filter = 1
 position = Vector2(396, 256)
 texture = ExtResource("3_5k77x")
 
-[node name="PipeRightBlocker" type="Sprite2D" parent="."]
-visible = false
-top_level = true
-z_index = 100
-position = Vector2(396, 256)
-texture = ExtResource("4_fdlyy")
+[node name="PipeRightBlocker" parent="." instance=ExtResource("4_udeb6")]
 
-[node name="PipeLeftBlocker" type="Sprite2D" parent="."]
-visible = false
-top_level = true
-z_index = 100
-position = Vector2(396, 256)
-texture = ExtResource("5_it34f")
+[node name="PipeLeftBlocker" parent="." instance=ExtResource("5_a4k7n")]

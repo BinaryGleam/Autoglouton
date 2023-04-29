@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://r0ywxoyn0foo"]
+
+[ext_resource type="Texture2D" uid="uid://dkivqru2g6415" path="res://assets/pipes/PipeSkeleton.png" id="1_u1co8"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jgas3"]
+a = Vector2(-47, -255)
+b = Vector2(-169, -415)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8v3sn"]
+a = Vector2(47, -255)
+b = Vector2(169, -415)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hsy50"]
+a = Vector2(-47, -256)
+b = Vector2(-47, -31)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5mr8b"]
+a = Vector2(47, -256)
+b = Vector2(47, -31)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gq714"]
+a = Vector2(-208, 64)
+b = Vector2(-46, -33)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1wfu1"]
+a = Vector2(208, 64)
+b = Vector2(46, -33)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vnri0"]
+a = Vector2(-113, 74)
+b = Vector2(-45, 31)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tgyap"]
+a = Vector2(113, 74)
+b = Vector2(45, 31)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yn1ht"]
+a = Vector2(-208, 63)
+b = Vector2(-208, 113)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bnnbb"]
+a = Vector2(208, 63)
+b = Vector2(208, 113)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vsc3v"]
+a = Vector2(-112, 72)
+b = Vector2(-112, 113)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ymh08"]
+a = Vector2(112, 72)
+b = Vector2(112, 113)
+
+[node name="PipeSkeleton" type="Sprite2D"]
+z_index = 100
+texture_filter = 1
+position = Vector2(396, 256)
+texture = ExtResource("1_u1co8")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="LeftEntryPipe" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_jgas3")
+
+[node name="RightEntryPipe" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_8v3sn")
+
+[node name="LeftMainPipe" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_hsy50")
+
+[node name="RightMainPipe" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_5mr8b")
+
+[node name="LeftPipeTop" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_gq714")
+
+[node name="RightPipeTop" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_1wfu1")
+
+[node name="LeftPipeBot" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_vnri0")
+
+[node name="RightPipeBot" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_tgyap")
+
+[node name="LeftPipeLeftExit" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_yn1ht")
+
+[node name="RightPipeLeftExit" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_bnnbb")
+
+[node name="LeftPipeRightExit" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_vsc3v")
+
+[node name="RightPipeRightExit" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_ymh08")

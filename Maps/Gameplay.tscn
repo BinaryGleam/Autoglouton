@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1mkhlvh4i24a"]
+
+[ext_resource type="PackedScene" uid="uid://df7bbov2dni5f" path="res://features/Pipe.tscn" id="1_a0rw0"]
+
+[node name="Gameplay" type="Node2D"]
+texture_filter = 1
+texture_repeat = 1
+
+[node name="Pipe" parent="." instance=ExtResource("1_a0rw0")]

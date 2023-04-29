@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc7sen8khweh6"]
+
+[ext_resource type="Texture2D" uid="uid://pagj4inunf5u" path="res://assets/pipes/PipeLeftBlocker.png" id="1_ys861"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_cjhx3"]
+a = Vector2(-48, -31)
+b = Vector2(48, 33)
+
+[node name="PipeLeftBlocker" type="Sprite2D"]
+visible = false
+z_index = 100
+texture_filter = 1
+position = Vector2(396, 256)
+texture = ExtResource("1_ys861")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Blocker" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("SegmentShape2D_cjhx3")
