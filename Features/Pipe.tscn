@@ -1,11 +1,42 @@
-[gd_scene load_steps=2 format=3 uid="uid://df7bbov2dni5f"]
+[gd_scene load_steps=6 format=3 uid="uid://df7bbov2dni5f"]
 
 [ext_resource type="Texture2D" uid="uid://cp8kgou2ahpek" path="res://assets/pipes/PipeBackground.png" id="1_fhsyp"]
+[ext_resource type="Texture2D" uid="uid://dkivqru2g6415" path="res://assets/pipes/PipeSkeleton.png" id="2_tdnu5"]
+[ext_resource type="Texture2D" uid="uid://c3da0y1en2uho" path="res://assets/pipes/PipeWindow.png" id="3_5k77x"]
+[ext_resource type="Texture2D" uid="uid://bjcdirhw5y2tm" path="res://assets/pipes/PipeRightBlocker.png" id="4_fdlyy"]
+[ext_resource type="Texture2D" uid="uid://pagj4inunf5u" path="res://assets/pipes/PipeLeftBlocker.png" id="5_it34f"]
 
 [node name="Pipe" type="Node2D"]
 texture_filter = 1
 texture_repeat = 2
 
 [node name="PipeBackground" type="Sprite2D" parent="."]
+z_index = -100
 position = Vector2(396, 256)
 texture = ExtResource("1_fhsyp")
+
+[node name="PipeSkeleton" type="Sprite2D" parent="."]
+top_level = true
+z_index = 100
+position = Vector2(396, 256)
+texture = ExtResource("2_tdnu5")
+
+[node name="PipeWindow" type="Sprite2D" parent="."]
+top_level = true
+z_index = 100
+position = Vector2(396, 256)
+texture = ExtResource("3_5k77x")
+
+[node name="PipeRightBlocker" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+z_index = 100
+position = Vector2(396, 256)
+texture = ExtResource("4_fdlyy")
+
+[node name="PipeLeftBlocker" type="Sprite2D" parent="."]
+visible = false
+top_level = true
+z_index = 100
+position = Vector2(396, 256)
+texture = ExtResource("5_it34f")
