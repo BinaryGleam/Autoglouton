@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://df7bbov2dni5f"]
+[gd_scene load_steps=2 format=3 uid="uid://df7bbov2dni5f"]
+
+[ext_resource type="Texture2D" uid="uid://cp8kgou2ahpek" path="res://assets/pipes/PipeBackground.png" id="1_fhsyp"]
 
 [node name="Pipe" type="Node2D"]
+texture_filter = 1
+texture_repeat = 2
+
+[node name="PipeBackground" type="Sprite2D" parent="."]
+position = Vector2(396, 256)
+texture = ExtResource("1_fhsyp")

@@ -12,14 +12,14 @@ config_version=5
 
 config/name="Autoglouton"
 config/description="A game about delivering garbage to the correct autoglouton in order to make the world a less trashy place"
-run/main_scene="res://Maps/main.tscn"
+run/main_scene="res://maps/main.tscn"
 config/features=PackedStringArray("4.0", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [display]
 
-window/size/viewport_width=752
-window/size/viewport_height=1000
+window/size/viewport_width=792
+window/size/viewport_height=512
 window/size/borderless=true
 
 [editor]
