@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://df7bbov2dni5f"]
+[gd_scene load_steps=7 format=3 uid="uid://df7bbov2dni5f"]
 
 [ext_resource type="Texture2D" uid="uid://cp8kgou2ahpek" path="res://assets/pipes/PipeBackground.png" id="1_fhsyp"]
+[ext_resource type="Script" path="res://features/Pipe.gd" id="1_o1u2y"]
 [ext_resource type="PackedScene" uid="uid://r0ywxoyn0foo" path="res://features/PipeSkeleton.tscn" id="2_spys7"]
 [ext_resource type="Texture2D" uid="uid://c3da0y1en2uho" path="res://assets/pipes/PipeWindow.png" id="3_5k77x"]
 [ext_resource type="PackedScene" uid="uid://dutgu8b2rf2wi" path="res://features/PipeRightBlocker.tscn" id="4_udeb6"]
@@ -9,6 +10,7 @@
 [node name="Pipe" type="Node2D"]
 texture_filter = 1
 texture_repeat = 2
+script = ExtResource("1_o1u2y")
 
 [node name="PipeBackground" type="Sprite2D" parent="."]
 z_index = -100
