@@ -6,7 +6,10 @@ extends Node2D
 
 # Onready vars
 @onready var left_blocker = $PipeLeftBlocker
+@onready var left_blocker_collision = $PipeLeftBlocker/Area2D/Blocker
 @onready var right_blocker = $PipeRightBlocker
+@onready var right_blocker_collision = $PipeRightBlocker/Area2D/Blocker
+
 
 # Controlling pipe flow
 func _input(event):
@@ -14,21 +17,21 @@ func _input(event):
 		var tween = create_tween()
 		if event.is_action_pressed("BlockLeft"):
 			left_blocker.show()
-			left_blocker.set_process(true)
+			left_blocker_collision.disabled = false;
 			left_blocker.modulate = Color.TRANSPARENT
 			tween.tween_property(left_blocker, "modulate", Color.WHITE, tween_durations)
 		elif event.is_action_released("BlockLeft"):
-			left_blocker.set_process(false)
+			left_blocker_collision.disabled = true;
 			left_blocker.modulate = Color.WHITE
 			tween.tween_property(left_blocker, "modulate", Color.TRANSPARENT, tween_durations)
 			tween.tween_callback(left_blocker.hide)
 		elif event.is_action_pressed("BlockRight"):
 			right_blocker.show()
-			right_blocker.set_process(true)
+			right_blocker_collision.disabled = false;
 			right_blocker.modulate = Color.TRANSPARENT
 			tween.tween_property(right_blocker, "modulate", Color.WHITE, tween_durations)
 		elif event.is_action_released("BlockRight"):
-			right_blocker.set_process(false)
+			right_blocker_collision.disabled = true;
 			right_blocker.modulate = Color.WHITE
 			tween.tween_property(right_blocker, "modulate", Color.TRANSPARENT, tween_durations)
 			tween.tween_callback(right_blocker.hide)

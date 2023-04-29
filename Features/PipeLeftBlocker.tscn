@@ -13,7 +13,8 @@ texture_filter = 1
 position = Vector2(396, 256)
 texture = ExtResource("1_ys861")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="StaticBody2D" parent="."]
 
 [node name="Blocker" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("SegmentShape2D_cjhx3")
+disabled = true
